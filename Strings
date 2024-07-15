@@ -1,0 +1,32 @@
+20.Valid Parentheses
+CODE:
+
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> stk;
+        for(char x:s){
+            if(x=='{'||x=='('||x=='['){
+            stk.push(x);}
+            else{
+                if(stk.empty()||x=='}'&&stk.top()!='{'
+                ||x==']'&&stk.top()!='['
+                ||x==')'&&stk.top()!='('){
+                    return false;
+                }
+                else{
+                    stk.pop();
+                }
+        }
+    }
+            return true;
+    }
+};
+
+
+Time Taken:14mins
+
+-------------------------------------------------------------------------------------
+
+
+
