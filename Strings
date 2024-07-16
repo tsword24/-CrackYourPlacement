@@ -86,3 +86,38 @@ time:40 mins
 
 ------------------------------------------------------
 
+628 Maximum Product of Three Numbers
+
+class Solution {
+public:
+    int maximumProduct(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        int n=nums.size();
+        return max(nums[0]*nums[1]*nums[n-1],nums[n-1]*nums[n-2]*nums[n-3]);
+    }
+};
+
+
+Time Taken:10mins
+---------------------------------------------------------
+168 Excel Sheet Column Titles
+
+class Solution {
+public:
+    string convertToTitle(int columnNumber) {
+        if(columnNumber==0){
+            return "";
+        }
+        else{
+            columnNumber--;
+            char c='A'+columnNumber%26;
+            return convertToTitle(columnNumber/26)+c;
+        }
+    }
+};
+
+
+Time Taken:10mins
+-----------------------------------------------------
+
+
