@@ -176,5 +176,26 @@ Time Taken :30min
 
 Time Taken:10mins
 -----------------------------------------------------
+1.Two Sum
+
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int>iny;
+        for(int i=0;i<nums.size();i++){
+            int l=target-nums[i];
+            if(iny.count(l)){
+                return {iny[l],i};
+            }
+            iny[nums[i]]=i;
+        }
+        return {};
+    }
+};
+
+
+time Taken:15minss
+------------------------------------------------------------
 
 
